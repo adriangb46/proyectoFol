@@ -33,7 +33,7 @@ export class ProductDefinition {
       weight: 12,
       time: '22 min',
       material: 'PLA Reciclable Gris',
-      image: '/capibara.jpg',
+      image: 'capibara.jpg',
       salesVolume: 100,
       totalRevenue: 300
     },
@@ -45,7 +45,7 @@ export class ProductDefinition {
       weight: 15,
       time: '30 min',
       material: 'PLA Biodegradable Verde',
-      image: '/tiburon.jpg',
+      image: 'tiburon.jpg',
       salesVolume: 75,
       totalRevenue: 300
     },
@@ -57,7 +57,7 @@ export class ProductDefinition {
       weight: 25,
       time: '50 min',
       material: 'PLA Biodegradable Verde',
-      image: '/t-rex.jpg',
+      image: 't-rex.jpg',
       salesVolume: 100,
       totalRevenue: 600
     },
@@ -69,7 +69,7 @@ export class ProductDefinition {
       weight: 30,
       time: '1h 00min',
       material: 'PLA Mate Púrpura',
-      image: '/jirafa.jpg',
+      image: 'jirafa.jpg',
       salesVolume: 50,
       totalRevenue: 300
     }

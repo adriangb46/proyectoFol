@@ -265,8 +265,8 @@
 
 /* Active Bar Fills */
 .fill-anc {
-  background: linear-gradient(90deg, var(--primary), #e040fb);
-  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+  background: linear-gradient(90deg, var(--primary), #00d2ff);
+  box-shadow: 0 0 10px rgba(0, 112, 243, 0.3);
 }
 
 .fill-ac-existencias {
@@ -284,15 +284,14 @@
   box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
-/* Pasivo Bar Fills */
 .fill-pn-subvencion {
-  background: linear-gradient(90deg, var(--secondary), #ff4081);
-  box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+  background: linear-gradient(90deg, var(--secondary), #ffb700);
+  box-shadow: 0 0 10px rgba(255, 90, 0, 0.3);
 }
 
 .fill-pn-resultado {
-  background: #e040fb;
-  box-shadow: 0 0 10px rgba(224, 64, 251, 0.3);
+  background: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
 }
 
 .fill-pc-proveedores {
@@ -312,14 +311,14 @@
 }
 
 .highlight-progress-item {
-  background: rgba(224, 64, 251, 0.03);
-  border: 1px solid rgba(224, 64, 251, 0.15);
+  background: rgba(0, 188, 212, 0.03);
+  border: 1px solid rgba(0, 188, 212, 0.15);
   border-radius: 8px;
   padding: 0.8rem;
 }
 
 .font-accent {
-  color: #e040fb !important;
+  color: #00bcd4 !important;
 }
 
 /* --- P&G Waterfall Progress Dashboard --- */
@@ -526,7 +525,7 @@
 }
 
 .ratios-analysis {
-  background: rgba(156, 39, 176, 0.05);
+  background: rgba(0, 112, 243, 0.04);
   border-left: 4px solid var(--primary);
   border-radius: 0 8px 8px 0;
   padding: 1.8rem;

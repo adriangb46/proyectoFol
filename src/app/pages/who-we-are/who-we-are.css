@@ -107,11 +107,11 @@
 }
 
 .leire {
-  --personal-color: #9c27b0; /* Purple */
-  --personal-gradient: linear-gradient(135deg, #9c27b0, #7b1fa2);
-  --personal-glow: 0 0 20px rgba(156, 39, 176, 0.2);
-  --personal-bg-alpha: rgba(156, 39, 176, 0.12);
-  --personal-border-alpha: rgba(156, 39, 176, 0.3);
+  --personal-color: #ffb700; /* Gold */
+  --personal-gradient: linear-gradient(135deg, #ffb700, #ff8f00);
+  --personal-glow: 0 0 20px rgba(255, 183, 0, 0.2);
+  --personal-bg-alpha: rgba(255, 183, 0, 0.12);
+  --personal-border-alpha: rgba(255, 183, 0, 0.3);
   border-top: 4px solid var(--personal-color);
 }
 
@@ -192,9 +192,9 @@
 }
 
 .tag-leire {
-  color: #9c27b0;
-  background: rgba(156, 39, 176, 0.12);
-  border: 1px solid rgba(156, 39, 176, 0.25);
+  color: #ffb700;
+  background: rgba(255, 183, 0, 0.12);
+  border: 1px solid rgba(255, 183, 0, 0.25);
 }
 
 .tag-adriana {
