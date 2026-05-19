@@ -1,15 +1,22 @@
-<nav class="navbar">
+<nav class="navbar" [class.menu-open]="isMobileMenuOpen">
   <div class="nav-container">
-    <a routerLink="/" class="logo">
+    <a routerLink="/" class="logo" (click)="closeMobileMenu()">
       <span class="logo-accent">El Club</span> de los Imantados
     </a>
-    <ul class="nav-links">
-      <li><a routerLink="/quienes-somos" routerLinkActive="active">Quiénes somos</a></li>
-      <li><a routerLink="/idea-negocio" routerLinkActive="active">Idea de Negocio</a></li>
-      <li><a routerLink="/definicion-producto" routerLinkActive="active">Producto</a></li>
-      <li><a routerLink="/forma-juridica" routerLinkActive="active">Forma Jurídica</a></li>
-      <li><a routerLink="/inversion-financiacion" routerLinkActive="active">Financiación</a></li>
-      <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+    
+    <button class="hamburger-btn" (click)="toggleMobileMenu()" aria-label="Toggle navigation Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    
+    <ul class="nav-links" [class.open]="isMobileMenuOpen">
+      <li><a routerLink="/quienes-somos" routerLinkActive="active" (click)="closeMobileMenu()">Quiénes somos</a></li>
+      <li><a routerLink="/idea-negocio" routerLinkActive="active" (click)="closeMobileMenu()">Idea de Negocio</a></li>
+      <li><a routerLink="/definicion-producto" routerLinkActive="active" (click)="closeMobileMenu()">Producto</a></li>
+      <li><a routerLink="/forma-juridica" routerLinkActive="active" (click)="closeMobileMenu()">Forma Jurídica</a></li>
+      <li><a routerLink="/inversion-financiacion" routerLinkActive="active" (click)="closeMobileMenu()">Financiación</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMobileMenu()">Contacto</a></li>
     </ul>
   </div>
 </nav>

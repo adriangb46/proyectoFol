@@ -89,47 +89,47 @@
 
 /* Personal Member Color Schemes (matching notebook highlights) */
 .hugo {
-  --personal-color: #2196f3; /* Blue */
-  --personal-gradient: linear-gradient(135deg, #2196f3, #0b76cc);
-  --personal-glow: 0 0 20px rgba(33, 150, 243, 0.2);
-  --personal-bg-alpha: rgba(33, 150, 243, 0.12);
-  --personal-border-alpha: rgba(33, 150, 243, 0.3);
+  --personal-color: #3b82f6; /* Blue */
+  --personal-gradient: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  --personal-glow: 0 0 20px rgba(59, 130, 246, 0.1);
+  --personal-bg-alpha: rgba(59, 130, 246, 0.08);
+  --personal-border-alpha: rgba(59, 130, 246, 0.2);
   border-top: 4px solid var(--personal-color);
 }
 
 .adrian {
-  --personal-color: #4caf50; /* Green */
-  --personal-gradient: linear-gradient(135deg, #4caf50, #2e7d32);
-  --personal-glow: 0 0 20px rgba(76, 175, 80, 0.2);
-  --personal-bg-alpha: rgba(76, 175, 80, 0.12);
-  --personal-border-alpha: rgba(76, 175, 80, 0.3);
+  --personal-color: #10b981; /* Emerald Green */
+  --personal-gradient: linear-gradient(135deg, #10b981, #047857);
+  --personal-glow: 0 0 20px rgba(16, 185, 129, 0.1);
+  --personal-bg-alpha: rgba(16, 185, 129, 0.08);
+  --personal-border-alpha: rgba(16, 185, 129, 0.2);
   border-top: 4px solid var(--personal-color);
 }
 
 .leire {
-  --personal-color: #ffb700; /* Gold */
-  --personal-gradient: linear-gradient(135deg, #ffb700, #ff8f00);
-  --personal-glow: 0 0 20px rgba(255, 183, 0, 0.2);
-  --personal-bg-alpha: rgba(255, 183, 0, 0.12);
-  --personal-border-alpha: rgba(255, 183, 0, 0.3);
+  --personal-color: #8b5cf6; /* Violet Purple */
+  --personal-gradient: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  --personal-glow: 0 0 20px rgba(139, 92, 246, 0.1);
+  --personal-bg-alpha: rgba(139, 92, 246, 0.08);
+  --personal-border-alpha: rgba(139, 92, 246, 0.2);
   border-top: 4px solid var(--personal-color);
 }
 
 .adriana {
-  --personal-color: #f44336; /* Red */
-  --personal-gradient: linear-gradient(135deg, #f44336, #c62828);
-  --personal-glow: 0 0 20px rgba(244, 67, 54, 0.2);
-  --personal-bg-alpha: rgba(244, 67, 54, 0.12);
-  --personal-border-alpha: rgba(244, 67, 54, 0.3);
+  --personal-color: #ef4444; /* Rose Red */
+  --personal-gradient: linear-gradient(135deg, #ef4444, #be123c);
+  --personal-glow: 0 0 20px rgba(239, 68, 68, 0.1);
+  --personal-bg-alpha: rgba(239, 68, 68, 0.08);
+  --personal-border-alpha: rgba(239, 68, 68, 0.2);
   border-top: 4px solid var(--personal-color);
 }
 
 .carlota {
-  --personal-color: #ff5722; /* Coral/Orange */
-  --personal-gradient: linear-gradient(135deg, #ff5722, #e64a19);
-  --personal-glow: 0 0 20px rgba(255, 87, 34, 0.2);
-  --personal-bg-alpha: rgba(255, 87, 34, 0.12);
-  --personal-border-alpha: rgba(255, 87, 34, 0.3);
+  --personal-color: #f97316; /* Amber Orange */
+  --personal-gradient: linear-gradient(135deg, #f97316, #c2410c);
+  --personal-glow: 0 0 20px rgba(249, 115, 22, 0.1);
+  --personal-bg-alpha: rgba(249, 115, 22, 0.08);
+  --personal-border-alpha: rgba(249, 115, 22, 0.2);
   border-top: 4px solid var(--personal-color);
 }
 
@@ -180,33 +180,33 @@
 }
 
 .tag-hugo {
-  color: #2196f3;
-  background: rgba(33, 150, 243, 0.12);
-  border: 1px solid rgba(33, 150, 243, 0.25);
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.18);
 }
 
 .tag-adrian {
-  color: #4caf50;
-  background: rgba(76, 175, 80, 0.12);
-  border: 1px solid rgba(76, 175, 80, 0.25);
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.18);
 }
 
 .tag-leire {
-  color: #ffb700;
-  background: rgba(255, 183, 0, 0.12);
-  border: 1px solid rgba(255, 183, 0, 0.25);
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.18);
 }
 
 .tag-adriana {
-  color: #f44336;
-  background: rgba(244, 67, 54, 0.12);
-  border: 1px solid rgba(244, 67, 54, 0.25);
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.18);
 }
 
 .tag-carlota {
-  color: #ff5722;
-  background: rgba(255, 87, 34, 0.12);
-  border: 1px solid rgba(255, 87, 34, 0.25);
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.18);
 }
 
 /* Keyframes */

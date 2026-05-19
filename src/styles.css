@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary: hsl(210, 100%, 55%); /* Electric Steel Blue */
-  --primary-glow: hsla(210, 100%, 55%, 0.3);
-  --secondary: hsl(24, 100%, 50%); /* Industrial Amber Orange */
-  --secondary-glow: hsla(24, 100%, 50%, 0.3);
-  --bg: hsl(215, 15%, 7%); /* Carbon Black / Dark Slate */
-  --surface: hsl(215, 15%, 11%);
-  --surface-hover: hsl(215, 15%, 16%);
-  --text: hsl(215, 10%, 95%);
-  --text-muted: hsl(215, 10%, 72%);
-  --border: hsla(215, 10%, 100%, 0.08);
-  --glass: hsla(215, 15%, 11%, 0.75);
-  --glass-border: hsla(215, 10%, 100%, 0.08);
+  --primary: hsl(255, 85%, 62%); /* Premium Amethyst Indigo */
+  --primary-glow: hsla(255, 85%, 62%, 0.15);
+  --secondary: hsl(330, 80%, 56%); /* Refined Rose Crimson */
+  --secondary-glow: hsla(330, 80%, 56%, 0.15);
+  --bg: hsl(240, 16%, 6%); /* Sleek Charcoal Slate Background */
+  --surface: hsl(240, 16%, 9%);
+  --surface-hover: hsl(240, 16%, 13%);
+  --text: hsl(240, 10%, 96%);
+  --text-muted: hsl(240, 8%, 70%);
+  --border: hsla(0, 0%, 100%, 0.05);
+  --glass: hsla(240, 16%, 9%, 0.75);
+  --glass-border: hsla(0, 0%, 100%, 0.05);
   
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
   
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
-  --shadow-lg: 0 16px 48px rgba(0,0,0,0.5);
+  --shadow-md: 0 12px 32px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.55);
 }
 
 * {
@@ -167,4 +167,27 @@ main {
 .balance-table tfoot td {
   border-top: 2px solid var(--primary);
   border-bottom: none;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .text-gradient {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+  .section-container {
+    padding: 2rem 1rem;
+  }
+  .content-card {
+    padding: 1.5rem;
+  }
 }

@@ -265,8 +265,8 @@
 
 /* Active Bar Fills */
 .fill-anc {
-  background: linear-gradient(90deg, var(--primary), #00d2ff);
-  box-shadow: 0 0 10px rgba(0, 112, 243, 0.3);
+  background: linear-gradient(90deg, var(--primary), #a855f7);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
 }
 
 .fill-ac-existencias {
@@ -285,13 +285,13 @@
 }
 
 .fill-pn-subvencion {
-  background: linear-gradient(90deg, var(--secondary), #ffb700);
-  box-shadow: 0 0 10px rgba(255, 90, 0, 0.3);
+  background: linear-gradient(90deg, var(--secondary), #f43f5e);
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.2);
 }
 
 .fill-pn-resultado {
-  background: #00bcd4;
-  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+  background: #a855f7;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
 }
 
 .fill-pc-proveedores {
@@ -311,14 +311,14 @@
 }
 
 .highlight-progress-item {
-  background: rgba(0, 188, 212, 0.03);
-  border: 1px solid rgba(0, 188, 212, 0.15);
+  background: rgba(168, 85, 247, 0.03);
+  border: 1px solid rgba(168, 85, 247, 0.12);
   border-radius: 8px;
   padding: 0.8rem;
 }
 
 .font-accent {
-  color: #00bcd4 !important;
+  color: #a855f7 !important;
 }
 
 /* --- P&G Waterfall Progress Dashboard --- */
@@ -525,7 +525,7 @@
 }
 
 .ratios-analysis {
-  background: rgba(0, 112, 243, 0.04);
+  background: rgba(168, 85, 247, 0.03);
   border-left: 4px solid var(--primary);
   border-radius: 0 8px 8px 0;
   padding: 1.8rem;
@@ -553,4 +553,20 @@
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .balance-bar-labels {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    text-align: center;
+  }
+  .balance-bar-subtext {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+    text-align: center;
+    font-size: 0.72rem;
+  }
 }
