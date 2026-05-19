@@ -1,0 +1,265 @@
+/* Container for subsections */
+.analysis-section {
+  margin-top: 4rem;
+  animation: slideUp 0.8s ease-out;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: #fff;
+  border-bottom: 2px solid var(--border); /* Horizontal line under title like in the image */
+}
+
+/* Grids: 2-column layout matching the photo's structure */
+.dafo-grid, .came-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .dafo-grid, .came-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Styling */
+.dafo-card, .came-card {
+  position: relative;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px; /* Slightly squarer corners like in the photo */
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hover effects */
+.dafo-card:hover, .came-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), var(--glow-shadow);
+  border-color: var(--accent-border);
+}
+
+/* Card Headers */
+.dafo-card h3, .came-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* List customization inside cards */
+.dafo-card ul, .came-card ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.dafo-card li, .came-card li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dafo-card li::before, .came-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -0.1rem;
+  color: var(--accent-color);
+  font-size: 1.3rem;
+}
+
+/* DAFO Color Themes */
+
+/* Fortalezas & Oportunidades: Green theme from the photo */
+.fortaleza, .oportunidad {
+  --accent-color: #2e7d32; /* Green line */
+  --accent-border: rgba(46, 125, 50, 0.4);
+  --glow-shadow: 0 0 20px rgba(46, 125, 50, 0.15);
+  border-top: 4px solid var(--accent-color);
+}
+
+/* Debilidades & Amenazas: Red/Brown theme from the photo */
+.debilidad, .amenaza {
+  --accent-color: #c62828; /* Red/Brown line */
+  --accent-border: rgba(198, 40, 40, 0.4);
+  --glow-shadow: 0 0 20px rgba(198, 40, 40, 0.15);
+  border-top: 4px solid var(--accent-color);
+}
+
+/* CAME Color Themes (All cards have a blue top border in the photo) */
+.came-card {
+  --accent-color: #1565c0; /* Blue line */
+  --accent-border: rgba(21, 101, 192, 0.4);
+  --glow-shadow: 0 0 20px rgba(21, 101, 192, 0.15);
+  border-top: 4px solid var(--accent-color);
+}
+
+/* Market Grid (Target Customer and Segment) */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .market-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.market-card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 2.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary); /* Left border accent */
+}
+
+.market-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), hsla(260, 100%, 65%, 0.15);
+  border-color: hsla(260, 100%, 65%, 0.4);
+}
+
+.market-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.market-card .tag {
+  font-size: 0.8rem;
+  background: hsla(260, 100%, 65%, 0.2);
+  color: var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid hsla(260, 100%, 65%, 0.3);
+}
+
+.market-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--secondary);
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.highlight-box strong {
+  color: #fff;
+}
+
+/* SMA Section */
+.sma-section {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sma-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sma-accent {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.sma-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .sma-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .sma-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sma-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sma-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: scale(1.03);
+  border-color: var(--secondary);
+}
+
+.sma-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sma-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.sma-card p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Keyframes */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

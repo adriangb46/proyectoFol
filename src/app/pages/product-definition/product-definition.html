@@ -1,18 +1,109 @@
 <section class="section-container">
   <header class="section-header">
-    <h1 class="text-gradient">Definición del Producto</h1>
-    <p class="subtitle">Características, precio, promoción y distribución.</p>
+    <h1 class="text-gradient">Catálogo de Productos</h1>
+    <p class="subtitle">Descubre nuestro catálogo de figuras y llaveros impresos en 3D con materiales biodegradables.</p>
   </header>
 
-  <div class="glass content-card">
-    <div class="info-grid">
-      <div class="info-item">
-        <h3>Características</h3>
-        <p>Un producto diseñado con las últimas tecnologías, escalable, seguro y fácil de usar para cualquier perfil de usuario.</p>
+  <!-- Filtro de Categorías -->
+  <div class="glass categories-filter">
+    <button 
+      [class.active]="selectedCategory === 'all'" 
+      (click)="setCategory('all')">
+      Todos
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'keyring'" 
+      (click)="setCategory('keyring')">
+      Llaveros
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'articulated'" 
+      (click)="setCategory('articulated')">
+      Articulados
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'decoration'" 
+      (click)="setCategory('decoration')">
+      Decoración
+    </button>
+  </div>
+
+  <!-- Contenedor Grid de Productos -->
+  <div class="products-grid">
+    <div class="glass product-card" *ngFor="let product of filteredProducts">
+      
+      <!-- Contenedor Imagen -->
+      <div class="product-image-container">
+        <img [src]="product.image" [alt]="product.name" class="product-image">
+        <span class="product-category-badge">{{ product.category === 'keyring' ? 'Llavero' : product.category === 'articulated' ? 'Articulado' : 'Decoración' }}</span>
       </div>
-      <div class="info-item">
-        <h3>Precio y Distribución</h3>
-        <p>Modelo de precios competitivo basado en el valor aportado, con una estrategia de distribución digital global.</p>
+
+      <!-- Detalles del Producto -->
+      <div class="product-info">
+        <h3 class="product-title">{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+
+        <!-- Tabla de Datos Técnicos de Impresión -->
+        <div class="product-specs">
+          <div class="spec-row">
+            <span class="spec-label">Peso de impresión:</span>
+            <span class="spec-value">{{ product.weight }} g</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Tiempo estimado:</span>
+            <span class="spec-value">{{ product.time }}</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Material base:</span>
+            <span class="spec-value">{{ product.material }}</span>
+          </div>
+        </div>
+
+        <!-- Precios e Integración P&G -->
+        <div class="product-financials">
+          <div class="price-box">
+            <span class="price-label">P.V.P. recomendado</span>
+            <span class="price-value">{{ product.price | currency:'EUR':'symbol':'1.2-2' }}</span>
+          </div>
+          <div class="sales-box">
+            <span class="sales-label">Ventas planificadas</span>
+            <span class="sales-value">{{ product.salesVolume }} uds.</span>
+          </div>
+        </div>
+
+        <div class="product-revenue-share">
+          <span>Ingreso Total Integrado: <strong>{{ product.totalRevenue | currency:'EUR':'symbol':'1.2-2' }}</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resumen de Ventas / Coherencia con P&G -->
+  <div class="glass catalog-summary-card">
+    <div class="summary-header">
+      <h4>Coherencia con Cuenta de Pérdidas y Ganancias</h4>
+      <span class="badge badge-accent">Vinculado a Finanzas</span>
+    </div>
+    
+    <div class="summary-content">
+      <p>Todos los precios, pesos de filamento y previsiones de ventas del catálogo están integrados directamente en el plan financiero de la Junior Empresa, cuadrando con la contabilidad:</p>
+      
+      <div class="summary-stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Ingresos de Ventas Catálogo</span>
+          <span class="stat-value text-success">1.500,00 €</span>
+          <span class="stat-sub">Suma de las ventas de todos los modelos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Aprovisionamientos Estimados</span>
+          <span class="stat-value text-danger">900,00 €</span>
+          <span class="stat-sub">Filamentos y piezas (bobinas, imanes, anillas)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Beneficio Neto (Margen 20%)</span>
+          <span class="stat-value text-cyan">300,00 €</span>
+          <span class="stat-sub">Resultado final traspasado al Balance</span>
+        </div>
       </div>
     </div>
   </div>

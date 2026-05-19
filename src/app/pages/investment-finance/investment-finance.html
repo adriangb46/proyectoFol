@@ -1,40 +1,279 @@
 <section class="section-container">
   <header class="section-header">
     <h1 class="text-gradient">Inversión y Financiación</h1>
-    <p class="subtitle">Análisis económico y balance de situación inicial.</p>
+    <p class="subtitle">Cuadro de mando financiero interactivo para el control y análisis de viabilidad.</p>
   </header>
 
-  <div class="glass content-card">
-    <h3>Balance de Situación (Resumen)</h3>
-    <div class="balance-table-container">
-      <table class="balance-table">
-        <thead>
-          <tr>
-            <th>Activo</th>
-            <th>Pasivo y Patrimonio Neto</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Inmovilizado: 50.000€</td>
-            <td>Capital Social: 40.000€</td>
-          </tr>
-          <tr>
-            <td>Existencias: 10.000€</td>
-            <td>Préstamos: 25.000€</td>
-          </tr>
-          <tr>
-            <td>Tesorería: 15.000€</td>
-            <td>Acreedores: 10.000€</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Total: 75.000€</td>
-            <td>Total: 75.000€</td>
-          </tr>
-        </tfoot>
-      </table>
+  <!-- Tarjeta Explicativa de la Integración -->
+  <div class="glass intro-card">
+    <div class="intro-accent"></div>
+    <div class="intro-content">
+      <h3>Plan Financiero Integrado</h3>
+      <p>Simulación contable de nuestra Junior Empresa de impresión 3D. La financiación del inmovilizado proviene de la <strong>cesión de uso de equipos del CIFP Avilés (capital en especie)</strong>. El beneficio neto de la Cuenta de Pérdidas y Ganancias (P&G) de <strong>300 €</strong> se integra en el Patrimonio Neto del Balance como <strong>Resultado del Ejercicio</strong>, cuadrando la estructura.</p>
     </div>
+  </div>
+
+  <div class="financial-grids">
+    
+    <!-- SECCIÓN: EQUILIBRIO DE BALANCE -->
+    <div class="glass financial-card balance-visualizer-card">
+      <div class="card-header">
+        <div class="header-indicator indicator-balance"></div>
+        <h3>Equilibrio de Balance (Doble Entrada)</h3>
+      </div>
+      
+      <div class="balance-bar-container">
+        <div class="balance-bar-labels">
+          <span class="label-activo">TOTAL ACTIVO: <strong>4.300 €</strong></span>
+          <span class="label-status">100% Cuadrado</span>
+          <span class="label-pasivo">TOTAL NETO + PASIVO: <strong>4.300 €</strong></span>
+        </div>
+        <div class="balance-bar-split">
+          <div class="split-side split-left" style="width: 50%;"></div>
+          <div class="split-divider"></div>
+          <div class="split-side split-right" style="width: 50%;"></div>
+        </div>
+        <div class="balance-bar-subtext">
+          <span>Inversión y Recursos (Estructura Económica)</span>
+          <span>Financiación y Deudas (Estructura Financiera)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN: DESGLOSE DE BALANCE (GRAFICO) -->
+    <div class="balance-container">
+      
+      <!-- ACTIVO -->
+      <div class="glass financial-card breakdown-card">
+        <div class="card-header">
+          <div class="header-indicator indicator-activo"></div>
+          <h3>Estructura del Activo (Inversiones)</h3>
+        </div>
+        
+        <div class="total-summary">
+          <span class="summary-label">Total Activo</span>
+          <span class="summary-value text-primary">4.300 €</span>
+        </div>
+
+        <div class="progress-list">
+          <!-- Inmovilizado Material -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Inmovilizado Material <small>(Equipos CIFP Avilés)</small></span>
+              <span class="item-percent">81.4%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-anc" style="width: 81.4%;"></div>
+            </div>
+            <span class="item-value">3.500 €</span>
+          </div>
+
+          <!-- Existencias -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Existencias <small>(Stock de filamentos)</small></span>
+              <span class="item-percent">7.0%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-ac-existencias" style="width: 7.0%;"></div>
+            </div>
+            <span class="item-value">300 €</span>
+          </div>
+
+          <!-- Clientes -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Clientes <small>(Ventas por cobrar)</small></span>
+              <span class="item-percent">4.6%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-ac-clientes" style="width: 4.6%;"></div>
+            </div>
+            <span class="item-value">200 €</span>
+          </div>
+
+          <!-- Tesorería -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Tesorería <small>(Caja y Banco)</small></span>
+              <span class="item-percent">7.0%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-ac-caja" style="width: 7.0%;"></div>
+            </div>
+            <span class="item-value">300 €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASIVO + PN -->
+      <div class="glass financial-card breakdown-card">
+        <div class="card-header">
+          <div class="header-indicator indicator-pasivo"></div>
+          <h3>Estructura de Financiación (Neto y Pasivo)</h3>
+        </div>
+        
+        <div class="total-summary">
+          <span class="summary-label">Total Pasivo y Neto</span>
+          <span class="summary-value text-secondary">4.300 €</span>
+        </div>
+
+        <div class="progress-list">
+          <!-- Subvenciones de Capital -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Subvenciones de Capital <small>(Cesión CIFP)</small></span>
+              <span class="item-percent">81.4%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-pn-subvencion" style="width: 81.4%;"></div>
+            </div>
+            <span class="item-value">3.500 €</span>
+          </div>
+
+          <!-- Resultado del Ejercicio -->
+          <div class="progress-item highlight-progress-item">
+            <div class="progress-details">
+              <span class="item-title font-accent">Resultado del Ejercicio <small>(Beneficio Neto)</small></span>
+              <span class="item-percent font-accent">7.0%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-pn-resultado" style="width: 7.0%;"></div>
+            </div>
+            <span class="item-value font-accent">300 €</span>
+          </div>
+
+          <!-- Proveedores -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Proveedores / Acreedores <small>(Filamentos a crédito)</small></span>
+              <span class="item-percent">11.6%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-pc-proveedores" style="width: 11.6%;"></div>
+            </div>
+            <span class="item-value">500 €</span>
+          </div>
+
+          <!-- Deudas a largo plazo -->
+          <div class="progress-item">
+            <div class="progress-details">
+              <span class="item-title">Deudas a largo plazo <small>(Pasivo No Corriente)</small></span>
+              <span class="item-percent">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-pnc-deudas" style="width: 0%;"></div>
+            </div>
+            <span class="item-value">0 €</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- SECCIÓN: P&G WATERFALL PROGRESS DASHBOARD -->
+    <div class="glass financial-card pg-visual-card">
+      <div class="card-header">
+        <div class="header-indicator indicator-pg"></div>
+        <h3>Flujo y Rendimiento de Ventas (Cuenta de P&G)</h3>
+      </div>
+
+      <div class="pg-chart-container">
+        
+        <!-- Ventas (100% de partida) -->
+        <div class="pg-metric-row">
+          <div class="metric-info">
+            <span class="metric-label">Ventas de Explotación (Ingresos Totales)</span>
+            <span class="metric-percentage">100%</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-revenue" style="width: 100%;"></div>
+          </div>
+          <div class="metric-value text-success">+1.500 €</div>
+        </div>
+
+        <!-- Consumos (60% del volumen de ingresos) -->
+        <div class="pg-metric-row">
+          <div class="metric-info">
+            <span class="metric-label">(-) Aprovisionamientos <small>(Filamentos consumidos)</small></span>
+            <span class="metric-percentage">60.0% de las ventas</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-expense-aprov" style="width: 60%;"></div>
+          </div>
+          <div class="metric-value text-danger">-900 €</div>
+        </div>
+
+        <!-- Gastos Operativos (20% del volumen de ingresos) -->
+        <div class="pg-metric-row">
+          <div class="metric-info">
+            <span class="metric-label">(-) Otros Gastos de Explotación <small>(Publicidad y Web)</small></span>
+            <span class="metric-percentage">20.0% de las ventas</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-expense-ops" style="width: 20%;"></div>
+          </div>
+          <div class="metric-value text-danger">-300 €</div>
+        </div>
+
+        <!-- Margen Neto (20% restante) -->
+        <div class="pg-metric-row highlight-metric-row">
+          <div class="metric-glow"></div>
+          <div class="metric-info">
+            <span class="metric-label">(=) Resultado del Ejercicio (Beneficio Neto)</span>
+            <span class="metric-percentage font-accent">20.0% de margen de beneficio</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-net-profit" style="width: 20%;"></div>
+          </div>
+          <div class="metric-value text-cyan">300 €</div>
+        </div>
+
+      </div>
+      
+      <div class="dashboard-note">
+        <p>💡 <strong>Análisis del Margen:</strong> De cada 10 € ingresados por la venta de imanes, destinamos 6 € a la compra de materias primas y 2 € a gastos operativos, quedándonos con un <strong>margen de beneficio neto limpio de 2 €</strong> (20% de rendimiento comercial).</p>
+      </div>
+    </div>
+
+    <!-- Ratios Financieros y Análisis de Viabilidad -->
+    <div class="glass financial-card ratios-card">
+      <div class="card-header">
+        <div class="header-indicator indicator-ratios"></div>
+        <h3>Ratios Financieros y Viabilidad</h3>
+      </div>
+
+      <div class="ratios-grid">
+        <!-- Fondo de Maniobra -->
+        <div class="ratio-item">
+          <span class="ratio-label">Fondo de Maniobra (FM)</span>
+          <span class="ratio-value text-success">+300 €</span>
+          <span class="ratio-formula">Activo Corriente (800€) - Pasivo Corriente (500€)</span>
+          <p class="ratio-desc">Es <strong>positivo</strong>. La empresa dispone de un margen de seguridad financiero para cubrir sus deudas a corto plazo sin riesgo de caer en suspensión de pagos.</p>
+        </div>
+
+        <!-- Liquidez Ordinaria -->
+        <div class="ratio-item">
+          <span class="ratio-label">Liquidez Ordinaria</span>
+          <span class="ratio-value text-success">1,60</span>
+          <span class="ratio-formula">Activo Corriente (800€) / Pasivo Corriente (500€)</span>
+          <p class="ratio-desc">Se sitúa en el <strong>rango óptimo (1,50 - 2,00)</strong>. Por cada euro de deuda a corto plazo, contamos con 1,60 € en liquidez o cobros para solventarla.</p>
+        </div>
+
+        <!-- Ratio de Endeudamiento -->
+        <div class="ratio-item">
+          <span class="ratio-label">Ratio de Endeudamiento</span>
+          <span class="ratio-value text-accent">11,6%</span>
+          <span class="ratio-formula">Pasivo Total (500€) / Total Activo (4.300€)</span>
+          <p class="ratio-desc">Es <strong>muy bajo</strong> (rango ideal: 40% - 60%). Muestra una excelente autonomía financiera y nulo peligro de quiebra, al no depender de financiación bancaria externa.</p>
+        </div>
+      </div>
+
+      <div class="ratios-analysis">
+        <h4>Comentario de Viabilidad y Diagnóstico</h4>
+        <p>El análisis conjunto de los estados contables revela una <strong>excelente salud financiera</strong> para el proyecto. Al estar exentos de costes de inmovilizado material y materias primas iniciales gracias a la colaboración del <strong>CIFP Avilés</strong>, la estructura de costes se reduce sustancialmente. El <strong>Fondo de Maniobra positivo (+300 €)</strong> y el <strong>Ratio de Liquidez (1,60)</strong> demuestran solvencia y agilidad a corto plazo. La escasa dependencia del crédito (endeudamiento de tan solo el 11,6%) otorga gran solidez frente a imprevistos operativos.</p>
+      </div>
+    </div>
+
   </div>
 </section>
