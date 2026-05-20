@@ -15,10 +15,12 @@
 
 /* Team Grid */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto 0 auto;
+  max-width: 940px; /* Fits exactly 3 cards of 280px + gaps, forcing a 3-2 layout on desktop */
 }
 
 /* Member Card */
@@ -28,43 +30,105 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  padding: 2.2rem 1.6rem 2rem 1.6rem;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex: 0 0 280px; /* Force uniform 280px width */
+  max-width: 280px;
+}
+
+/* Gradient Top Bar */
+.member-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--personal-gradient);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 2;
+}
+
+/* Soft Radial Backdrop Glow on Hover */
+.member-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--personal-bg-alpha) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .member-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), var(--personal-glow);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), var(--personal-glow);
   border-color: var(--personal-color);
+}
+
+.member-card:hover::before {
+  height: 6px;
+}
+
+.member-card:hover::after {
+  opacity: 1;
 }
 
 /* Avatar styling */
 .avatar {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin: 0 auto 1.2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 800;
   color: #fff;
   background: var(--personal-gradient);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), var(--personal-glow);
   font-family: var(--font-heading);
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  z-index: 2;
 }
 
 .member-card:hover .avatar {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.15) rotate(8deg);
+  border-color: var(--personal-color);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), 0 0 15px var(--personal-color);
+}
+
+.member-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.member-main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .member-info h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   color: #fff;
   margin-bottom: 0.4rem;
 }
@@ -72,65 +136,90 @@
 .role-badge {
   display: inline-block;
   font-size: 0.8rem;
-  font-weight: 500;
-  padding: 0.2rem 0.6rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
   border-radius: 20px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: var(--personal-color);
   background: var(--personal-bg-alpha);
   border: 1px solid var(--personal-border-alpha);
+  align-self: center;
 }
 
 .member-info p {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Specific Task Badges inside cards */
+.member-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.task-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.member-card:hover .task-tag {
+  border-color: var(--personal-border-alpha);
+  color: #fff;
+  background: var(--personal-bg-alpha);
 }
 
 /* Personal Member Color Schemes (matching notebook highlights) */
 .hugo {
   --personal-color: #3b82f6; /* Blue */
   --personal-gradient: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  --personal-glow: 0 0 20px rgba(59, 130, 246, 0.1);
+  --personal-glow: 0 0 20px rgba(59, 130, 246, 0.15);
   --personal-bg-alpha: rgba(59, 130, 246, 0.08);
   --personal-border-alpha: rgba(59, 130, 246, 0.2);
-  border-top: 4px solid var(--personal-color);
 }
 
 .adrian {
   --personal-color: #10b981; /* Emerald Green */
   --personal-gradient: linear-gradient(135deg, #10b981, #047857);
-  --personal-glow: 0 0 20px rgba(16, 185, 129, 0.1);
+  --personal-glow: 0 0 20px rgba(16, 185, 129, 0.15);
   --personal-bg-alpha: rgba(16, 185, 129, 0.08);
   --personal-border-alpha: rgba(16, 185, 129, 0.2);
-  border-top: 4px solid var(--personal-color);
 }
 
 .leire {
   --personal-color: #8b5cf6; /* Violet Purple */
   --personal-gradient: linear-gradient(135deg, #8b5cf6, #6d28d9);
-  --personal-glow: 0 0 20px rgba(139, 92, 246, 0.1);
+  --personal-glow: 0 0 20px rgba(139, 92, 246, 0.15);
   --personal-bg-alpha: rgba(139, 92, 246, 0.08);
   --personal-border-alpha: rgba(139, 92, 246, 0.2);
-  border-top: 4px solid var(--personal-color);
 }
 
 .adriana {
   --personal-color: #ef4444; /* Rose Red */
   --personal-gradient: linear-gradient(135deg, #ef4444, #be123c);
-  --personal-glow: 0 0 20px rgba(239, 68, 68, 0.1);
+  --personal-glow: 0 0 20px rgba(239, 68, 68, 0.15);
   --personal-bg-alpha: rgba(239, 68, 68, 0.08);
   --personal-border-alpha: rgba(239, 68, 68, 0.2);
-  border-top: 4px solid var(--personal-color);
 }
 
 .carlota {
   --personal-color: #f97316; /* Amber Orange */
   --personal-gradient: linear-gradient(135deg, #f97316, #c2410c);
-  --personal-glow: 0 0 20px rgba(249, 115, 22, 0.1);
+  --personal-glow: 0 0 20px rgba(249, 115, 22, 0.15);
   --personal-bg-alpha: rgba(249, 115, 22, 0.08);
   --personal-border-alpha: rgba(249, 115, 22, 0.2);
-  border-top: 4px solid var(--personal-color);
 }
 
 /* Skills Section */

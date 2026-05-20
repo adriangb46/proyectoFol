@@ -55,12 +55,13 @@
 }
 
 /* List customization inside cards */
-.dafo-card ul, .came-card ul {
+.dafo-card ul, .came-card ul, .market-card ul {
   padding-left: 0;
   list-style: none;
+  margin-bottom: 1.5rem;
 }
 
-.dafo-card li, .came-card li {
+.dafo-card li, .came-card li, .market-card li {
   position: relative;
   padding-left: 1.2rem;
   margin-bottom: 0.8rem;
@@ -69,7 +70,7 @@
   line-height: 1.5;
 }
 
-.dafo-card li::before, .came-card li::before {
+.dafo-card li::before, .came-card li::before, .market-card li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -119,6 +120,7 @@
 }
 
 .market-card {
+  position: relative;
   background: var(--glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -128,6 +130,7 @@
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
   border-left: 4px solid var(--primary); /* Left border accent */
+  --accent-color: var(--primary);
 }
 
 .market-card:hover {
