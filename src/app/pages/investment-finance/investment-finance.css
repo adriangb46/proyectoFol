@@ -89,7 +89,7 @@
 .indicator-activo { background: var(--primary); }
 .indicator-pasivo { background: var(--secondary); }
 .indicator-pg { background: #4caf50; }
-.indicator-ratios { background: #ff5722; }
+
 
 /* Double Entrance Balance Bar */
 .balance-bar-container {
@@ -453,101 +453,6 @@
 .text-danger { color: #f44336 !important; }
 .text-cyan { color: #00bcd4 !important; }
 
-/* --- Ratios Section --- */
-.ratios-card {
-  padding: 2.2rem;
-}
-
-.ratios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-@media (max-width: 992px) {
-  .ratios-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-.ratio-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.ratio-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.ratio-label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-
-.ratio-value {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-heading);
-}
-
-.ratio-formula {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.ratio-desc {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.text-accent {
-  color: #00bcd4 !important;
-}
-
-.ratios-analysis {
-  background: rgba(168, 85, 247, 0.03);
-  border-left: 4px solid var(--primary);
-  border-radius: 0 8px 8px 0;
-  padding: 1.8rem;
-  line-height: 1.6;
-}
-
-.ratios-analysis h4 {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-.ratios-analysis p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin: 0;
-}
-
-.ratios-analysis strong {
-  color: #fff;
-}
 
 /* Keyframes */
 @keyframes slideUp {
